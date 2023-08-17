@@ -8,7 +8,7 @@ spec:
     namespace: demo-dev
     server: 'https://kubernetes.default.svc'
   source:
-    repoURL: 'https://github.com/OskarMarthinussen/testing-ok.git'
+    repoURL: 'https://github.com/OskarMarthinussen/quay.git'
     path: demo-dev-quay-repo-app1
     targetRevision: HEAD
   syncPolicy:
