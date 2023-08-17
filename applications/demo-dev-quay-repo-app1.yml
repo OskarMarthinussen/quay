@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-dev-quay-repo-app1
+  namespace: gitops-developers
+spec:
+  destination:
+    namespace: demo-dev
+    server: 'https://kubernetes.default.svc'
+  source:
+    repoURL: 'https://github.com/OskarMarthinussen/testing-ok.git'
+    path: demo-dev-quay-repo-app1
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+      allowEmpty: true
+  project: demo
